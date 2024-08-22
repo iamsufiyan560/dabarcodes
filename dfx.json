@@ -1,0 +1,38 @@
+{
+  "canisters": {
+    "dabarcodes_backend": {
+      "candid": "src/dabarcodes_backend/dabarcodes_backend.did",
+      "package": "dabarcodes_backend",
+      "type": "rust"
+    },
+    "dabarcodes_frontend": {
+      "dependencies": [
+        "dabarcodes_backend"
+      ],
+      "source": [
+        "src/dabarcodes_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "dabarcodes_frontend"
+    },
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
